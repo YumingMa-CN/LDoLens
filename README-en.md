@@ -18,7 +18,7 @@
 
 ### Method 1: Download the Release Package (Recommended)
 
-1. Go to the [GitHub Releases page](https://github.com/YumingMa-CN/LDoLens/releases) and download the `.crx` file (or get the [latest release here](https://github.com/YumingMa-CN/LDoLens/releases/latest)).
+1. Go to the [GitHub Releases page](https://github.com/YumingMa-CN/LDoLens/releases) and download the `.crx` file (or get the [latest release here](https://github.com/YumingMa-CN/LDoLens/releases/download/v1.0.0/LDoLens-v1.0.crx)).
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer mode**
 4. Drag and drop the downloaded `.crx` file into the extensions page to install.
@@ -87,7 +87,7 @@ LDoLens
 ## FAQ
 
 - Can't find the floating panel?
-   Make sure you are on a topic page under `https://linux.do/t/`.
+   Make sure you are on a topic page under `https://linux.do/t/*`.
 - To report bugs or give feedback, please use the [GitHub issues page](https://github.com/YumingMa-CN/LDoLens/issues) or contact the maintainer.
 
 ------

@@ -8,7 +8,7 @@
 
 L站评论筛选器（LDoLens）是为 LinuxDo（L站）论坛定制的 Chrome 扩展，可以在帖子评论中筛选和聚焦你关注的用户发言，只看你想看的内容，提升浏览体验。
 
-- 支持在 L站（https://linux.do/）的主题帖中，只显示你指定用户的所有评论。
+- 支持在 [L站](https://linux.do/) 的主题帖中，只显示你指定用户的所有评论。
 - 可自定义筛选人名单，随时开关筛选功能。
 - 配置简单，界面轻便，支持自动保存设置。
 
@@ -18,7 +18,7 @@ L站评论筛选器（LDoLens）是为 LinuxDo（L站）论坛定制的 Chrome �
 
 ### 方式一：直接下载安装包（推荐）
 
-1. 前往 [GitHub Releases 页面](https://github.com/YumingMa-CN/LDoLens/releases) 下载 `.crx` 文件，_或直接下载[最新版 Release](https://github.com/YumingMa-CN/LDoLens/releases/latest)_
+1. 前往 [GitHub Releases 页面](https://github.com/YumingMa-CN/LDoLens/releases) 下载 `.crx` 文件，_或直接下载[最新版 Release](https://github.com/YumingMa-CN/LDoLens/releases/download/v1.0.0/LDoLens-v1.0.crx)_
 2. 打开 Chrome，访问 `chrome://extensions/`
 3. 开启 **开发者模式**
 4. 将下载好的 `.crx` 文件**直接拖入**扩展页面进行安装
@@ -41,7 +41,7 @@ L站评论筛选器（LDoLens）是为 LinuxDo（L站）论坛定制的 Chrome �
 
 ## 使用方法
 
-1. 在 L站帖子页面（https://linux.do/t/xxxx）点击工具栏插件图标
+1. 在 L站帖子页面（`https://linux.do/t/xxxx`） 点击工具栏插件图标
 2. 在弹出的过滤器设置界面，勾选你想要“只看”的用户名（支持一个或多个）；若**全不选**，则视为不启用筛选。
 3. 确认后，该页面自动只显示这些人的评论，屏蔽其它发言
 4. 可随时关闭或修改筛选条件，操作立刻生效
