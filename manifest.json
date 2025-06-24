@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "L站评论筛选器",
+  "version": "1.0", 
+  "description": "筛选指定用户的评论，只看他们的发言。",
+
+  
+  "permissions": [
+    "storage",   
+    "scripting"  
+  ],
+
+  "host_permissions": [
+    "https://linux.do/t/*"
+  ],
+
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  
+  "action": {
+    "default_popup": "popup.html", 
+    "default_title": "设置筛选器",
+    "default_icon": {
+      "16": "icons/filter-icon-16.png",
+      "48": "icons/filter-icon-48.png",
+      "128": "icons/filter-icon-128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/filter-icon-16.png",
+    "48": "icons/filter-icon-48.png",
+    "128": "icons/filter-icon-128.png"
+  }
+}

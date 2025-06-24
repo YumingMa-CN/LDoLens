@@ -1,0 +1,96 @@
+#comment-filter-icon {
+  position: fixed !important;
+  display: flex !important;
+  top: 50%;
+  right: 15px !important;
+  width: 48px !important;
+  height: 48px !important;
+  
+  /* [修改] 将 background-color 替换为 background-image 以实现渐变 */
+background-image: linear-gradient(
+  to bottom,
+  /* 黑色区域：从顶部 0% 到 25% */
+  black 0%,
+  black 25%,
+
+  /* 灰色区域：从 25% 到 75% (25% + 50%) */
+  rgb(221, 219, 219) 25%,
+  rgb(221, 219, 219) 75%,
+
+  /* 黄色区域：从 75% 到 结尾 100% */
+  rgb(255, 202, 56) 75%,
+  rgb(255, 202, 56) 100%
+);
+  /* background-image: linear-gradient(
+    to bottom,
+    black 25%,
+    white 0%,
+    rgb(197, 197, 197) 66.7%,
+    rgb(255, 166, 0) 25%
+  ) !important; */
+
+  border-radius: 50% !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+  z-index: 99990 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgb(0, 0, 0) !important; 
+  cursor: pointer !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+#comment-filter-icon:hover {
+  /* :hover状态会继承主规则的 ainter 光标，无需额外设置 */
+  transform: scale(1.1) !important;
+}
+
+#comment-filter-icon:active {
+  /* [修改] 2. 仅在鼠标按下时（激活状态），光标变为抓取手型 */
+  cursor: grabbing !important;
+  
+  /* 保留原有的按下时缩放效果 */
+  transform: scale(0.9) !important;
+}
+
+#comment-filter-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+/* 弹窗样式保持不变 */
+.filter-modal-content {
+  display: flex !important; flex-direction: column !important;
+  max-width: 500px !important; max-height: 45vh !important;
+  background-color: #fff; border-radius: 8px; width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); overflow: hidden;
+}
+.filter-modal-header, .filter-modal-footer { flex-shrink: 0; }
+.filter-modal-body { flex-grow: 1; min-height: 0; display: flex; flex-direction: column; padding: 15px 20px; }
+#user-search-input { flex-shrink: 0; margin-bottom: 10px; }
+#user-filter-list { flex-grow: 1; overflow-y: auto; list-style: none; padding: 0; margin: 0; }
+#comment-filter-modal { position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5) !important; z-index: 99999 !important; display: flex !important; justify-content: center; align-items: center; opacity: 1; visibility: visible; transition: opacity 0.3s, visibility 0.3s; }
+#comment-filter-modal.filter-modal-hidden { opacity: 0 !important; visibility: hidden !important; }
+.filter-modal-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid #dee2e6; }
+.filter-modal-header h3 { margin: 0; font-size: 18px; }
+#close-filter-modal { border: none; background: none; font-size: 28px; cursor: pointer; color: #6c757d; padding: 0; line-height: 1; }
+.filter-user-item label { display: flex; align-items: center; padding: 8px 5px; cursor: pointer; border-radius: 4px; transition: background-color 0.2s; }
+.filter-user-item label:hover { background-color: #f8f9fa; }
+.user-checkbox { margin-right: 12px; width: 20px; height: 20px; }
+.filter-user-avatar { width: 25px; height: 25px; border-radius: 50%; margin-right: 10px; object-fit: cover; background-color: #eee; }
+.filter-user-name { font-size: 16px; }
+.filter-modal-footer { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 12px 20px; border-top: 1px solid #dee2e6; background-color: #f8f9fa; }
+#apply-filter-btn, #select-all-users, #deselect-all-users { padding: 8px 16px; border: 1px solid #797d81; background-color: #fff; color: #495057; border-radius: 4px; cursor: pointer; margin-left: 10px;}
+#apply-filter-btn { background-color: #007bff; color: #fff; border-color: #007bff; }
+#apply-filter-btn:hover { background-color: #0056b3; }
+#select-all-users:hover, #deselect-all-users:hover { background-color: #e0dede; }
+.trace-switch-container { display: flex; align-items: center; margin-right: auto; }
+.trace-switch-container > span { margin-left: 8px; font-size: 14px; color: #333; }
+.trace-switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+.trace-switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; }
+.slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; transition: .4s; }
+input:checked + .slider { background-color: #2196F3; }
+input:checked + .slider:before { transform: translateX(18px); }
+.slider.round { border-radius: 22px; }
+.slider.round:before { border-radius: 50%; } 
